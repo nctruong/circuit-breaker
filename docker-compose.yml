@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  app:
+#    platform: linux/x86_64
+    build: ./app
+    command: bash -c "bundle exec puma -C config/puma.rb"
+    volumes:
+      - ./app:/server
+    ports:
+      - 3000:3000
+    depends_on:
+      - target-server
+
+  target-server:
+#    platform: linux/x86_64
+    build: ./target-server
+    volumes:
+      - ./target-server:/server
+    ports:
+      - 4000:4000
+

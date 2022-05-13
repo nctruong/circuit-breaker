@@ -1,0 +1,16 @@
+{
+  "name": "simple-node-service",
+  "version": "1.0.0",
+  "description": "\"Simple node service responder\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ."
+  },
+  "author": "peaonunes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "nodemon": "^1.11.0"
+  }
+}
